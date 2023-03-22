@@ -26,11 +26,32 @@ public class ProyectoSpringApplication implements CommandLineRunner {
 				"Pepe",
 				"Lopez",
 				"Alegria",
+				"@pepe@gmail.com",
 				LocalDate.of(1982,5,9),
 				LocalDateTime.now()
 		);
 
+		Customer customer2 = new Customer(
+				"Pepa",
+				"Garcia",
+				"Lopez",
+				"@pepa@gmail.com",
+				LocalDate.of(1992,7,25),
+				LocalDateTime.now()
+		);
+
+		Customer customer3 = new Customer(
+				"Jose Luis",
+				"Lopez",
+				"Garcia",
+				"@joseluis@gmail.com",
+				LocalDate.of(1988,8,13),
+				LocalDateTime.now()
+		);
+
 		customerRepository.save(customer);
+		customerRepository.save(customer2);
+		customerRepository.save(customer3);
 
 	}
 }

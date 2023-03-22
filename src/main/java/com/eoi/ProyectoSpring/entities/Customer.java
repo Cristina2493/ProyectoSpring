@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Table(name = "customer")  // Nombre de la tabla
 public class Customer {
 
-    @Id
+    @Id  // Genera una clave primaria en la tabla
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
@@ -27,16 +27,18 @@ public class Customer {
 
     private String thirdName;
 
+    private String email;
+
     private LocalDate birthDate;
 
     private LocalDateTime registrationDateTime;
 
-    public Customer(String name, String secondName, String thirdName, LocalDate birthDate, LocalDateTime registrationDateTime) {
+    public Customer(String name, String secondName, String thirdName, String email, LocalDate birthDate, LocalDateTime registrationDateTime) {
         this.name = name;
         this.secondName = secondName;
         this.thirdName = thirdName;
+        this.email = email;
         this.birthDate = birthDate;
         this.registrationDateTime = registrationDateTime;
     }
-
 }
